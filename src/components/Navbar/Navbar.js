@@ -48,7 +48,7 @@ const Navbar = () => {
                             {click ? <BiX/> : <BiMenu/>}
                         </MenuIcon>
 
-                        <Menu onClick={handleClick} click={click}>
+                        <Menu>
                             <MenuItem>
                                 <MenuLink onClick={closeMenu} to="/">Mens</MenuLink>
                             </MenuItem>

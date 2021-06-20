@@ -10,9 +10,13 @@ align-items: center;
 `;
 
 export const WorksContainer = styled(Container)`
-display: flex;
+/* display: flex;
 flex-direction: column;
-justify-content: space-between;
+justify-content: space-between; */
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+/* grid-auto-rows: repeat(3, 1fr); */
+grid-auto-rows: 1fr;
 align-items: left;
 padding: 5rem 8rem;
 color: #333333;
@@ -55,20 +59,25 @@ transition: all .5s ease;
     }
     @media only screen and (max-width:900px){
         margin-bottom: 10rem;
-        margin-right: 0;
+        /* margin-right: 10rem; */
     }
     @media only screen and (max-width: 800px){
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.12);
     }
 }
 @media only screen and (max-width:900px){
-        width: 50rem;
+        width: 20rem;
+        margin-right: 5rem;
+
 }
 @media only screen and (max-width:500px){
-        width: 30rem;
+        width: 20rem;
+        margin-right: 5rem;
+
 }
 @media only screen and (min-width:1890px){
-        width: 40rem;
+        width: 20rem;
+        margin-right: 5rem;
 }
 &:hover {
     box-shadow:  0px 10px 80px rgba(0, 0, 0, 0.21);
@@ -82,8 +91,6 @@ transition: all .5s ease;
 export const WorksIconContainer = styled.div`
 width: 12rem;
 height: 12rem;
-/* border-radius: 50%; */
-/* border: 2px solid #333; */
 transition: all .3s ease-out;
 margin-top: 2rem;
 display: flex;
@@ -134,23 +141,6 @@ export const Select = styled.select`
     min-height: 20px;
     padding: 0px 2px 1px;
   }
-`;
-
-export const PaginateButton = styled.button`
-    display: block;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    color: #fff;
-    background-color: orange;
-    cursor: pointer;
-    :hover {
-        opacity: 0.8;
-    }
-    :active {
-    background-color: #005fa3;
-    }
 `;
 
 export const ButtonWrapper = styled.section`

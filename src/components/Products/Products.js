@@ -2,14 +2,13 @@ import dataSet from '../../dataSet.json';
 import React, { useState, useEffect } from 'react';
 import ProductList from '../ProductList/ProductList';
 import { Select, Button, ButtonWrapper } from '../Products/ProductElements';
-import Paginate from "./Paginate";
-
+import Paginate from "../Paginate/Paginate";
 
 const Products = () => {
 
     const [products, setProducts] = useState(dataSet);
-    const [filterByType, setFilterByType] = useState("");
-    const [filterByBrand, setFilterByBrand] = useState("");
+    const [filterByType, setFilterByType] = useState("all");
+    const [filterByBrand, setFilterByBrand] = useState("all");
     const [results, setResults] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(6);
@@ -41,19 +40,22 @@ const Products = () => {
     
     useEffect(() => {
 
-        let result = [...products];
+        let result = [...products]; 
 
-        if(filterByType === 'all' || filterByBrand === 'all' ){
-             return results
-        }
-        if(filterByType) {
-            result = result.filter(item => item.type === filterByType);      
-        }
-        if(filterByBrand) {
-        result = result.filter(item => item.brand === filterByBrand);      
+        if(filterByType === 'all' && filterByBrand === 'all' ){
+            setResults(result)
         }  
-
+         
+        if(filterByType !== 'all') {
+            result = result.filter(item => item.type === filterByType);      
+        } 
+        
+        if(filterByBrand !== 'all') {
+            result = result.filter(item => item.brand === filterByBrand);      
+        } // else {setResults(result)}         
+        
         setResults(result)
+
         }, [ products, filterByBrand, filterByType])
 
         
@@ -83,7 +85,7 @@ const Products = () => {
             </Select>
             <div>
             <ButtonWrapper>
-                <Button primary onClick={onClickSort}> Sort by name </Button>  
+                <Button primary onClick={onClickSort}> Sort by ascending order </Button>  
                 {/* <Button> Descending </Button> */}
             </ButtonWrapper>
             </div>

@@ -16,8 +16,8 @@ export const ProductList = ({products}) => {
     return (
         <div>
              <WorksContent>
-                <WorksContainer>
-                    <WorksTitle> Products</WorksTitle>
+                        <WorksTitle> Products</WorksTitle>
+                        <WorksContainer>
                         {products.map((item, idx)=> (
                         <WorksCardContent key={idx}>
                         <WorksCard>
