@@ -1,7 +1,7 @@
 import dataSet from '../../dataSet.json';
 import React, { useState, useEffect } from 'react';
 import ProductList from '../ProductList/ProductList';
-import { Select, Button, ButtonWrapper, ButtonContainer } from '../Products/ProductElements';
+import { Select, Button, ButtonWrapper, ButtonContainer, ProductNoListing } from '../Products/ProductElements';
 import Paginate from "../Paginate/Paginate";
 
 const Products = () => {
@@ -95,7 +95,7 @@ const Products = () => {
             </ButtonContainer>
             </div>
             {results.length ?
-           <ProductList products={currentPosts}/> : <div>No such perfumes available</ div> }
+           <ProductList products={currentPosts}/> :  <ProductNoListing>No such perfumes available</ProductNoListing> }
             <Paginate
                 postsPerPage={postsPerPage}
                 totalPosts={results.length}

@@ -7,6 +7,7 @@ export const ProductContent = styled.section`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    height: 90rem;
 `;
 
 export const ProductContainer = styled(Container)`
@@ -172,3 +173,8 @@ export const Button = styled.button`
     color: #000;
     }
 `;
+
+export const ProductNoListing = styled.div`
+    height: 90rem;
+    font-size: 3rem;
+`
