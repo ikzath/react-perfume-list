@@ -21,8 +21,8 @@ function Footer() {
             <FooterSection>
                 <FooterContainer>
                     <FooterNewsletter>
-                        <FooterNewsletterTitle>Join our listing for execlusive discounts and new recipes</FooterNewsletterTitle>
-                        <FooterNewsletterText>We create new recipes every week and cooking tips</FooterNewsletterText>
+                        <FooterNewsletterTitle>Join our listing for execlusive discounts and new products</FooterNewsletterTitle>
+                        <FooterNewsletterText>We come with new weekly offers and styling tips</FooterNewsletterText>
                         <FooterNewsletterForm>
                             <FooterLabel htmlFor="email">Email address</FooterLabel>
                            <FooterNewsletterInput name="email" id="email" type="email" placeholder="Email address" />
@@ -57,7 +57,7 @@ function Footer() {
 
                         </FooterLinksWrapper>
                     </FooterLinkContainer>
-                    <FooterCopyRight to='https://github.com/ikzath/react-perfume-list'> &copy; Copyright 2021, Designed and coded with 💛 by Ikzath Kalanthar</FooterCopyRight>
+                    <FooterCopyRight to='/'> Copyright 2021, Designed and coded with 💛 by Ikzath Kalanthar</FooterCopyRight>
                 </FooterContainer>
             </FooterSection>
 
