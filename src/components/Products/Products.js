@@ -40,7 +40,6 @@ const Products = () => {
 
     
     useEffect(() => {
-
         let result = [...products]; 
 
         if(filterByType === 'All' && filterByBrand === 'All' ){
@@ -60,7 +59,6 @@ const Products = () => {
         function onClickSort(){
             const dataArray = [ ...results]
             setResults(dataArray.sort((a,b) => a.name.localeCompare(b.name)));
-            console.log('cliked')
         }
           
         // Get current posts
@@ -73,11 +71,11 @@ const Products = () => {
         
     return (
         <div>
-             <label> Type : </label>
+             <label> Filter by type : </label>
             <Select name='products' onChange={onChangeType}>
                 {types}
             </Select><br />
-            <label> Brand : </label>
+            <label> Filter by brand : </label>
             <Select name='products' onChange={onChangeBrand} >
                 {brand}
             </Select>

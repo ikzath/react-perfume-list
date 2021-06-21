@@ -47,7 +47,6 @@ const Navbar = () => {
                         <NavbarIcon onClick={handleClick}>
                             {click ? <BiX/> : <BiMenu/>}
                         </NavbarIcon>
-
                         <NavbarList onClick={handleClick} click={click}>
                             <NavbarItem>
                                 <NavbarLink onClick={closeMenu} to="/">Mens</NavbarLink>
@@ -67,13 +66,10 @@ const Navbar = () => {
                                     <NavbarLinkBtn to="/order-now">
                                         <Button primary bigFont onClick={closeMenu}>Order Now</Button>
                                     </NavbarLinkBtn>
-                                )
-                                }
+                                )}                                
                             </NavbarItemBtn>
                         </NavbarList>
-
                     </NavbarContainer>
-
                 </Nav>
             </IconContext.Provider>
         </div>

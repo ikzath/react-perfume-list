@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {BiCheck, BiDetail, BiDish} from 'react-icons/bi';
+import {BiDetail, BiDish} from 'react-icons/bi';
 import {Container} from '../../GlobalStyles';
 
 export const ProductContent = styled.section`
@@ -10,9 +10,6 @@ export const ProductContent = styled.section`
 `;
 
 export const ProductContainer = styled(Container)`
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
@@ -24,8 +21,9 @@ export const ProductContainer = styled(Container)`
 `;
 
 export const ProductTitle = styled.h2`
-    font-size: arial(2rem, 4.5vw, 5rem);
+    font-size: 4rem;
     font-weight: bold;
+    color: orange;
     `;
 
     export const ProductCardContent = styled.div`

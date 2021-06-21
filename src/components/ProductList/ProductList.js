@@ -16,7 +16,7 @@ export const ProductList = ({products}) => {
     return (
         <div>
              <ProductContent>
-                <ProductTitle> Products</ProductTitle>
+                <ProductTitle> Perfume List</ProductTitle>
                 <ProductContainer>
                 {products.map((item, idx)=> (
                     <ProductCardContent key={idx}>

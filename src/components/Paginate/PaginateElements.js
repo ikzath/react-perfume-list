@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const PaginateBar = styled.div`
     display: flex; 
     margin-left: 65px;  
+    margin-bottom: 30px;
 `;
 
 export const PaginateBarElements = styled.div`

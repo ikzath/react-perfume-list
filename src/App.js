@@ -1,7 +1,8 @@
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import GlobalStyles from './GlobalStyles';
 import Products from "./components/Products/Products";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyles/>
       <Navbar/>
       <Products />
+      <Footer />
     </Router>
   );
 }
