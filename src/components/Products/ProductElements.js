@@ -57,7 +57,6 @@ export const ProductCard = styled.div`
     }
     @media only screen and (max-width:900px){
         margin-bottom: 10rem;
-        /* margin-right: 10rem; */
     }
     @media only screen and (max-width: 800px){
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.12);
@@ -71,7 +70,6 @@ export const ProductCard = styled.div`
 @media only screen and (max-width:500px){
         width: 20rem;
         margin-right: 5rem;
-
 }
 @media only screen and (min-width:1890px){
         width: 20rem;
@@ -112,25 +110,27 @@ export const ProductIcon3 = styled(BiDish)`
 export const ProductCardTitle = styled.h3`
     font-size: 2rem;
     font-weight: bold;
-    padding-top: 1rem;
+    padding-top: 1rem;    
 `;
 
 export const ProductCardText = styled.p`
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1rem 2rem;
+    color: red;
 `;
 
 export const Select = styled.select`
-  width: 25%;
-  height: 60px;
-  background: yellow;
-  color: gray;
-  padding-left: 5px;
-  font-size: 14px;
-  border: none;
-  margin-left: 10px;
-  margin-top: 20px;
-  border-radius: 10px;
+    width: 25%;
+    height: 60px;
+    background: #e6e4dc;
+    color: black;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
 
   option {
     color: black;
@@ -142,6 +142,11 @@ export const Select = styled.select`
     background-color: whitesmoke;
   }
 `;
+
+export const ButtonContainer = styled.div`
+    display: flex;
+    margin-right: 20px;
+    `
 
 export const ButtonWrapper = styled.section`
     background-color: whitesmoke;
@@ -162,7 +167,7 @@ export const Button = styled.button`
     border: none;
     transition: transform .2s ease;
     &:hover{
-        background-color: ${({primary}) => primary? 'yellow': '#E38B06'};  
+        background-color: ${({primary}) => primary? 'white': '#E38B06'};  
     transform: translateY(-.5rem) scale(1.02);
     color: #000;
     }

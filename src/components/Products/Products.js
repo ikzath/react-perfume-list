@@ -1,7 +1,7 @@
 import dataSet from '../../dataSet.json';
 import React, { useState, useEffect } from 'react';
 import ProductList from '../ProductList/ProductList';
-import { Select, Button, ButtonWrapper } from '../Products/ProductElements';
+import { Select, Button, ButtonWrapper, ButtonContainer } from '../Products/ProductElements';
 import Paginate from "../Paginate/Paginate";
 
 const Products = () => {
@@ -60,6 +60,11 @@ const Products = () => {
             const dataArray = [ ...results]
             setResults(dataArray.sort((a,b) => a.name.localeCompare(b.name)));
         }
+
+        function onClickSortDesc(){
+            const dataArray = [ ...results]
+            setResults(dataArray.sort((a,b) => b.name.localeCompare(a.name)));
+        }
           
         // Get current posts
         const indexOfLastPost = currentPage * postsPerPage;
@@ -70,7 +75,7 @@ const Products = () => {
         const paginate = pageNumber => setCurrentPage(pageNumber);
         
     return (
-        <div>
+        <div data-testid='product-1'>
              <label> Filter by type : </label>
             <Select name='products' onChange={onChangeType}>
                 {types}
@@ -80,10 +85,14 @@ const Products = () => {
                 {brand}
             </Select>
             <div>
-            <ButtonWrapper>
-                <Button primary onClick={onClickSort}> Sort by ascending order </Button>  
-                {/* <Button> Descending </Button> */}
-            </ButtonWrapper>
+            <ButtonContainer>
+                <ButtonWrapper>
+                    <Button data-testid='button-1' primary onClick={onClickSort}> Sort by ascending order </Button>  
+                </ButtonWrapper>
+                <ButtonWrapper>
+                    <Button data-testid='button-1' primary onClick={onClickSortDesc}> Sort by descending order </Button>  
+                </ButtonWrapper>
+            </ButtonContainer>
             </div>
             {results.length ?
            <ProductList products={currentPosts}/> : <div>No such perfumes available</ div> }

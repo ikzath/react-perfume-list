@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-testid="product-1"
+>
+  <label>
+     Filter by type : 
+  </label>
+  <select
+    className="sc-dIsUp iUEUFW"
+    name="products"
+    onChange={[Function]}
+  >
+    <option>
+      All
+    </option>
+    <option>
+      Eau de Parfum
+    </option>
+    <option>
+      Eau de Toilette
+    </option>
+    <option>
+      Parfum
+    </option>
+  </select>
+  <br />
+  <label>
+     Filter by brand : 
+  </label>
+  <select
+    className="sc-dIsUp iUEUFW"
+    name="products"
+    onChange={[Function]}
+  >
+    <option>
+      All
+    </option>
+    <option>
+      Lancôme
+    </option>
+    <option>
+      Jean Paul Gaultier
+    </option>
+    <option>
+      Paco Rabanne
+    </option>
+    <option>
+      Hugo Boss
+    </option>
+    <option>
+      Giorgio Armani
+    </option>
+    <option>
+      Yves Saint Laurent
+    </option>
+    <option>
+      Chloé
+    </option>
+    <option>
+      Dior
+    </option>
+    <option>
+      Guerlain
+    </option>
+    <option>
+      Narciso Rodriguez
+    </option>
+    <option>
+      Issey Miyake
+    </option>
+    <option>
+      Dolce & Gabbana
+    </option>
+    <option>
+      Lacoste
+    </option>
+    <option>
+      Viktor & Rolf
+    </option>
+    <option>
+      Emporio Armani
+    </option>
+  </select>
+  <div>
+    <section
+      className="sc-bqGGPW gHHmpt"
+    >
+      <button
+        className="sc-ksluID guRrvX"
+        data-testid="button-1"
+        onClick={[Function]}
+      >
+         Sort by ascending order 
+      </button>
+    </section>
+  </div>
+  <div>
+    No such perfumes available
+  </div>
+  <div
+    className="sc-hBMUJo dGMzYZ"
+  />
+</div>
+`;

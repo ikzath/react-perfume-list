@@ -14,9 +14,9 @@ import {
 
 export const ProductList = ({products}) => {
     return (
-        <div>
+        <div data-testid='Perfume-List'>
              <ProductContent>
-                <ProductTitle> Perfume List</ProductTitle>
+                <ProductTitle > Perfume List</ProductTitle>
                 <ProductContainer>
                 {products.map((item, idx)=> (
                     <ProductCardContent key={idx}>
