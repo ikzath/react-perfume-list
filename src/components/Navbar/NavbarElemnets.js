@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {BiRestaurant} from 'react-icons/bi';
+import {BiBarcodeReader} from 'react-icons/bi';
 import {Container} from '../../GlobalStyles';
+// import { ReactComponent as Icon } from "./FlaconiIcon.svg";
 
 
 export const Nav = styled.nav` 
@@ -25,7 +26,7 @@ export const NavbarContainer = styled(Container)`
     ${Container};
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled.div`
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -33,13 +34,12 @@ export const NavLogo = styled(Link)`
     text-decoration: none;
     font-size: 2.5rem;
     font-weight: 800;
-    transition: all .5s ease;
     &:hover{
         transform: scale(1.08);
 }
 `;
 
-export const NavIcon = styled(BiRestaurant)`
+export const NavIcon = styled(BiBarcodeReader)`
     margin-right: .8rem;
     transition: all .5s ease;
     &:hover {
@@ -47,7 +47,7 @@ export const NavIcon = styled(BiRestaurant)`
 }
 `;
 
-export const MenuIcon = styled.div`
+export const NavbarIcon = styled.div`
 display: none;
 @media (max-width: 1000px) {
     display: block;
@@ -60,7 +60,7 @@ display: none;
 }
 `;
 
-export const Menu = styled.ul`
+export const NavbarList = styled.ul`
     display: flex;
     align-items: center;
     text-align: center;
@@ -77,7 +77,7 @@ export const Menu = styled.ul`
 }
 `;
 
-export const MenuItem = styled.li`
+export const NavbarItem = styled.li`
     list-style: none;
     height: 80px;
     @media only screen and (max-width:1000px){
@@ -88,7 +88,7 @@ export const MenuItem = styled.li`
 }
 `;
 
-export const MenuLink = styled(Link)`
+export const NavbarLink = styled(Link)`
     text-decoration: none;
     font-weight: bold;
     font-size: 2rem;
@@ -116,7 +116,7 @@ export const MenuLink = styled(Link)`
 }
 `;
 
-export const MenuItemBtn = styled.li`
+export const NavbarItemBtn = styled.li`
 list-style: none;
 @media screen and (max-width:1000px){
     display: flex;
@@ -127,7 +127,7 @@ list-style: none;
 }
 `;
 
-export const MenuLinkBtn = styled(Link)`
+export const NavbarLinkBtn = styled(Link)`
     text-decoration: none;
     display: flex;
     justify-content: center;

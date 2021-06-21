@@ -6,9 +6,9 @@ import Paginate from "../Paginate/Paginate";
 
 const Products = () => {
 
-    const [products, setProducts] = useState(dataSet);
-    const [filterByType, setFilterByType] = useState("all");
-    const [filterByBrand, setFilterByBrand] = useState("all");
+    const [products] = useState(dataSet);
+    const [filterByType, setFilterByType] = useState("All");
+    const [filterByBrand, setFilterByBrand] = useState("All");
     const [results, setResults] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(6);
@@ -17,14 +17,15 @@ const Products = () => {
         return [...new Set(items.map(item => item[value]))]
     })
 
+    // get unique option value keys
     let types = getUnique(dataSet, 'type')
-        types = ['all', ...types]
+        types = ['All', ...types]
         types= types.map((option, idx) => (
         <option key={idx} value={option.type}>{option}</option>
     ))
 
     let brand = getUnique(dataSet, 'brand')
-        brand = ['all', ...brand]
+        brand = ['All', ...brand]
         brand= brand.map((option, idx) => (
         <option key={idx} value={option.brand}>{option}</option>
     ))
@@ -42,20 +43,17 @@ const Products = () => {
 
         let result = [...products]; 
 
-        if(filterByType === 'all' && filterByBrand === 'all' ){
+        if(filterByType === 'All' && filterByBrand === 'All' ){
             setResults(result)
-        }  
-         
-        if(filterByType !== 'all') {
+        }           
+        if(filterByType !== 'All') {
             result = result.filter(item => item.type === filterByType);      
-        } 
-        
-        if(filterByBrand !== 'all') {
+        }         
+        if(filterByBrand !== 'All') {
             result = result.filter(item => item.brand === filterByBrand);      
-        } // else {setResults(result)}         
+        }  
         
         setResults(result)
-
         }, [ products, filterByBrand, filterByType])
 
         

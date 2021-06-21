@@ -1,36 +1,36 @@
 import React from 'react';
 import {
-    WorksContainer,
-    WorksContent,
-    WorksTitle,
-    WorksCardContent,
-    WorksCard,
-    WorksIconContainer,
-    WorksIcon,
-    WorksCardTitle,
-    WorksCardText
+    ProductContainer,
+    ProductContent,
+    ProductTitle,
+    ProductCardContent,
+    ProductCard,
+    ProductIconContainer,
+    ProductIcon,
+    ProductCardTitle,
+    ProductCardText
 } from '../Products/ProductElements';
 
 
 export const ProductList = ({products}) => {
     return (
         <div>
-             <WorksContent>
-                        <WorksTitle> Products</WorksTitle>
-                        <WorksContainer>
-                        {products.map((item, idx)=> (
-                        <WorksCardContent key={idx}>
-                        <WorksCard>
-                            <WorksIconContainer>
-                                <WorksIcon src={item.image}/>
-                            </WorksIconContainer>
-                            <WorksCardTitle>{item.name}</WorksCardTitle>
-                            <WorksCardText>{item.type}</WorksCardText>                         
-                        </WorksCard>
-                        </WorksCardContent>
-                         ))}
-                </WorksContainer>
-            </WorksContent>
+             <ProductContent>
+                <ProductTitle> Products</ProductTitle>
+                <ProductContainer>
+                {products.map((item, idx)=> (
+                    <ProductCardContent key={idx}>
+                    <ProductCard>
+                        <ProductIconContainer>
+                            <ProductIcon src={item.image}/>
+                        </ProductIconContainer>
+                        <ProductCardTitle>{item.name}</ProductCardTitle>
+                        <ProductCardText>{item.type}</ProductCardText>                         
+                    </ProductCard>
+                    </ProductCardContent>
+                    ))}
+                </ProductContainer>
+            </ProductContent>
         </div>
     )
 }

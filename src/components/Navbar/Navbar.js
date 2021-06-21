@@ -8,12 +8,12 @@ import
     NavbarContainer,
     NavLogo,
     NavIcon,
-    MenuIcon,
-    Menu,
-    MenuItem,
-    MenuLink,
-    MenuItemBtn,
-    MenuLinkBtn,
+    NavbarIcon,
+    NavbarList,
+    NavbarItem,
+    NavbarLink,
+    NavbarItemBtn,
+    NavbarLinkBtn,
 } from './NavbarElemnets';
 
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
         showButton();
     }, []);
     window.addEventListener('resize', showButton);
-    
+
     return (
         <div>
             <IconContext.Provider value={{ color: '#fff'}}>
@@ -42,35 +42,35 @@ const Navbar = () => {
                     <NavbarContainer>
                         <NavLogo to="/">
                             <NavIcon/>
-                            Flaconi Parfums
+                            Flaconi Perfumes
                         </NavLogo>
-                        <MenuIcon onClick={handleClick}>
+                        <NavbarIcon onClick={handleClick}>
                             {click ? <BiX/> : <BiMenu/>}
-                        </MenuIcon>
+                        </NavbarIcon>
 
-                        <Menu>
-                            <MenuItem>
-                                <MenuLink onClick={closeMenu} to="/">Mens</MenuLink>
-                            </MenuItem>
-                            <MenuItem>
-                                <MenuLink onClick={closeMenu} to="/about">Womens</MenuLink>
-                            </MenuItem>
-                            <MenuItem>
-                                <MenuLink onClick={closeMenu} to="/recipe">Special Offers</MenuLink>
-                            </MenuItem>
-                            <MenuItemBtn>
+                        <NavbarList onClick={handleClick} click={click}>
+                            <NavbarItem>
+                                <NavbarLink onClick={closeMenu} to="/">Mens</NavbarLink>
+                            </NavbarItem>
+                            <NavbarItem>
+                                <NavbarLink onClick={closeMenu} to="/about">Womens</NavbarLink>
+                            </NavbarItem>
+                            <NavbarItem>
+                                <NavbarLink onClick={closeMenu} to="/recipe">Special Offers</NavbarLink>
+                            </NavbarItem>
+                            <NavbarItemBtn>
                                 {button?(
-                                    <MenuLinkBtn to="/order-now">
+                                    <NavbarLinkBtn to="/order-now">
                                         <Button primary>Order Now</Button>
-                                    </MenuLinkBtn>
+                                    </NavbarLinkBtn>
                                 ): (
-                                    <MenuLinkBtn to="/order-now">
+                                    <NavbarLinkBtn to="/order-now">
                                         <Button primary bigFont onClick={closeMenu}>Order Now</Button>
-                                    </MenuLinkBtn>
+                                    </NavbarLinkBtn>
                                 )
                                 }
-                            </MenuItemBtn>
-                        </Menu>
+                            </NavbarItemBtn>
+                        </NavbarList>
 
                     </NavbarContainer>
 
@@ -80,4 +80,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default Navbar; 

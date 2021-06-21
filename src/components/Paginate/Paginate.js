@@ -12,8 +12,8 @@ const Paginate = ({ postsPerPage, totalPosts, paginate }) => {
   return (
       <PaginateBar>
         {pageNumbers.map(number => (
-            <PaginateBarElements> Page :
-                <PaginateButton key={number} onClick={() => paginate(number)} >{number}</PaginateButton>
+            <PaginateBarElements key={number}> Page :
+                <PaginateButton onClick={() => paginate(number)} >{number}</PaginateButton>
             </PaginateBarElements>
           ))}
       </PaginateBar>
