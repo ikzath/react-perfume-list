@@ -25,8 +25,8 @@ function Footer() {
                         <FooterNewsletterText>We come with new weekly offers and styling tips</FooterNewsletterText>
                         <FooterNewsletterForm>
                             <FooterLabel htmlFor="email">Email address</FooterLabel>
-                           <FooterNewsletterInput name="email" id="email" type="email" placeholder="Email address" />
-                           <FooterBtn>Submit</FooterBtn>
+                            <FooterNewsletterInput name="email" id="email" type="email" placeholder="Email address" />
+                            <FooterBtn>Submit</FooterBtn>
                         </FooterNewsletterForm>
                     </FooterNewsletter>
                     <FooterLinkContainer>
@@ -39,22 +39,21 @@ function Footer() {
                             <FooterLinks>
                                 <FooterLinkTitle>Services</FooterLinkTitle>
                                 <FooterLink to='/about'>How it works</FooterLink>
-                                <FooterLink to='/'>Perfume prep kit</FooterLink>                                
+                                <FooterLink to='/'>Perfume prep kit</FooterLink>
                             </FooterLinks>
 
                         </FooterLinksWrapper>
                         <FooterLinksWrapper>
                             <FooterLinks>
-                                <FooterLinkTitle>Resources</FooterLinkTitle>                                
+                                <FooterLinkTitle>Resources</FooterLinkTitle>
                                 <FooterLink to='/'>FAQ &amp; Support</FooterLink>
                                 <FooterLink to='/'>Affiliate Program</FooterLink>
                             </FooterLinks>
                             <FooterLinks>
                                 <FooterLinkTitle>Contact</FooterLinkTitle>
                                 <FooterLink to='/'>Instagram</FooterLink>
-                                <FooterLink to='/'>Facebook</FooterLink>                                
+                                <FooterLink to='/'>Facebook</FooterLink>
                             </FooterLinks>
-
                         </FooterLinksWrapper>
                     </FooterLinkContainer>
                     <FooterCopyRight to='/'> Copyright 2021, Designed and coded with 💛 by Ikzath Kalanthar</FooterCopyRight>

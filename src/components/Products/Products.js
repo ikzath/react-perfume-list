@@ -65,6 +65,11 @@ const Products = () => {
             const dataArray = [ ...results]
             setResults(dataArray.sort((a,b) => b.name.localeCompare(a.name)));
         }
+
+        function filterByPrice(){
+            const dataArray = [ ...results]
+            setResults(dataArray.sort((a,b) => a.price >b.price ? 1 : -1));
+        }
           
         // Get current posts
         const indexOfLastPost = currentPage * postsPerPage;
@@ -91,6 +96,9 @@ const Products = () => {
                 </ButtonWrapper>
                 <ButtonWrapper>
                     <Button data-testid='button-1' primary onClick={onClickSortDesc}> Sort by descending order </Button>  
+                </ButtonWrapper>
+                <ButtonWrapper>
+                    <Button data-testid='button-1' primary onClick={filterByPrice}>Lowest to Highest Price </Button>  
                 </ButtonWrapper>
             </ButtonContainer>
             </div>

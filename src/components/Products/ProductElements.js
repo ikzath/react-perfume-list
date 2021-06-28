@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {BiDetail, BiDish} from 'react-icons/bi';
-import {Container} from '../../GlobalStyles';
+import { BiDetail, BiDish } from 'react-icons/bi';
+import { Container } from '../../GlobalStyles';
 
 export const ProductContent = styled.section`
     display: flex;
@@ -13,6 +13,7 @@ export const ProductContent = styled.section`
 export const ProductContainer = styled(Container)`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));   */
     grid-auto-rows: 1fr;
     grid-gap: 20px;
     align-items: left;
@@ -27,7 +28,7 @@ export const ProductTitle = styled.h2`
     color: orange;
     `;
 
-    export const ProductCardContent = styled.div`
+export const ProductCardContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -159,8 +160,8 @@ export const ButtonWrapper = styled.section`
 
 export const Button = styled.button`
     border-radius: 20px;
-    background-color: ${({primary}) => primary? '#E38B06': 'lightgreen'};
-    color: ${({primary}) => primary ? 'whitesmoke': '#fff'};
+    background-color: ${({ primary }) => primary ? '#E38B06' : 'lightgreen'};
+    color: ${({ primary }) => primary ? 'whitesmoke' : '#fff'};
     padding: 18px 30px;
     font-size: 20px;
     outline: none;
@@ -168,7 +169,7 @@ export const Button = styled.button`
     border: none;
     transition: transform .2s ease;
     &:hover{
-        background-color: ${({primary}) => primary? 'white': '#E38B06'};  
+        background-color: ${({ primary }) => primary ? 'white' : '#E38B06'};  
     transform: translateY(-.5rem) scale(1.02);
     color: #000;
     }
