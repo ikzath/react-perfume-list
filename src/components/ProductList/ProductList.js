@@ -26,7 +26,7 @@ export const ProductList = ({products}) => {
                         </ProductIconContainer>
                         <ProductCardTitle>{item.name}</ProductCardTitle>
                         <ProductCardText>{item.type}</ProductCardText>                         
-                        <ProductCardText>{item.price}</ProductCardText>                         
+                        <ProductCardText>$.{item.price}</ProductCardText>                         
                     </ProductCard>
                     </ProductCardContent>
                     ))}

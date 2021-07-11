@@ -55,7 +55,7 @@ const Navbar = () => {
                                 <NavbarLink onClick={closeMenu} to="/about">Womens</NavbarLink>
                             </NavbarItem>
                             <NavbarItem>
-                                <NavbarLink onClick={closeMenu} to="/recipe">Special Offers</NavbarLink>
+                                <NavbarLink onClick={closeMenu} to="/offers">Special Offers</NavbarLink>
                             </NavbarItem>
                             <NavbarItemBtn>
                                 {button?(
